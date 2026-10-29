@@ -1,0 +1,21 @@
+LICENSE
+  s_b7c03e4d4dc655::t_9f28959f899996 1-662
+docs/research/2026-10-29-agent-first-patching-tool.md
+  s_b7c03e4d4dc655::t_7e6a898fc7728f 1-809
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b820b6b706033c351915e4b9384410aa80126873",
+  "prompts": {},
+  "sessions": {
+    "s_b7c03e4d4dc655": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3561a736-c1d1-49d3-a15d-4f434a7ea0a4",
+        "model": "unknown"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
