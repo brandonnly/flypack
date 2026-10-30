@@ -1,0 +1,32 @@
+docs/adr/0002-ui-stack.md
+  s_b7c03e4d4dc655::t_0442b77acbc689 16-18,22-26
+brand/README.md
+  s_b7c03e4d4dc655::t_037322aacf78e5 5-7,9-10,12-14,18-20,28-47,51-53,64-67,71-76,78,80-81,89-91
+brand/tokens/README.md
+  s_b7c03e4d4dc655::t_0033b06d0650a1 3-4,12-14,25-28,30,39-50,53-57,61-89
+AGENTS.md
+  s_b7c03e4d4dc655::t_1d12d9fba1fbe1 24-25
+  s_b7c03e4d4dc655::t_a5dddecd47dfb7 3-23,29-38
+brand/TAGLINE.md
+  s_b7c03e4d4dc655::t_013502d763dc19 25-27
+docs/PRODUCT.md
+  s_b7c03e4d4dc655::t_cb9a4609b12489 34-36,44
+docs/adr/0001-agpl-license.md
+  s_b7c03e4d4dc655::t_0e61615d51f95a 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b6b498cce8330d4fe30be401aab96b29deb9c69d",
+  "prompts": {},
+  "sessions": {
+    "s_b7c03e4d4dc655": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3561a736-c1d1-49d3-a15d-4f434a7ea0a4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
