@@ -1,0 +1,33 @@
+AGENTS.md
+  s_b7c03e4d4dc655::t_80bce9943829d1 36-54
+docs/agents/afk-slice-workflow.md
+  s_b7c03e4d4dc655::t_ecc026976d1991 1-90
+.coderabbit.yaml
+  s_b7c03e4d4dc655::t_d503caaab9c30a 1-19
+docs/agents/pull-requests.md
+  s_b7c03e4d4dc655::t_a60f062c932b61 1-39
+cubic.yaml
+  s_b7c03e4d4dc655::t_319901a093e9ab 1-18
+docs/agents/domain.md
+  s_b7c03e4d4dc655::t_21e481dd828cb4 1-51
+docs/agents/issue-tracker.md
+  s_b7c03e4d4dc655::t_46beb67be11e7d 1-52
+docs/agents/triage-labels.md
+  s_b7c03e4d4dc655::t_591c5760a77c87 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1de8d51722913d06e5a4f2d7c3f584f41daf2cd3",
+  "prompts": {},
+  "sessions": {
+    "s_b7c03e4d4dc655": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3561a736-c1d1-49d3-a15d-4f434a7ea0a4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
