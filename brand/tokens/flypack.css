@@ -1,12 +1,14 @@
 /*
  * Flypack design tokens: shadcn/ui (Base UI) + Tailwind v4.
  *
- * Import after Tailwind in the app's globals.css:
+ * Import after Tailwind in the app's globals.css (path relative to that file; see README.md):
  *   @import "tailwindcss";
  *   @import "shadcn/tailwind.css";
  *   @import "@fontsource-variable/archivo";
  *   @import "@fontsource-variable/jetbrains-mono";
- *   @import "../brand/tokens/flypack.css";
+ *   @import "../../brand/tokens/flypack.css";
+ *
+ * `dark:` matches the element carrying `.dark` and everything inside it.
  *
  * Every color pairing below was checked with WCAG 2 and APCA; see README.md.
  * Rules the values depend on:
@@ -17,7 +19,7 @@
  *   - No yellow washes on dark surfaces: they turn olive. Mark selection with a yellow bar or text.
  */
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Metric-matched fallbacks, so swapping in the web font doesn't shift layout. */
 @font-face {

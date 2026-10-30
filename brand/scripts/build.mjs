@@ -4,7 +4,7 @@
 //   cd brand/scripts && pnpm install && pnpm build
 
 import { existsSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Resvg } from "@resvg/resvg-js";
@@ -29,7 +29,7 @@ const FONTS = {
 };
 
 const WORDMARK_TRACKING = -0.045; // em
-const TAGLINE = "Show up knowing."; // see brand/TAGLINE.md
+const TAGLINE = "Plan every cable, rack and route before the show."; // see brand/TAGLINE.md
 
 async function loadFont(weight) {
   const file = join(cache, `archivo-${weight}.ttf`);
@@ -37,7 +37,10 @@ async function loadFont(weight) {
     await mkdir(cache, { recursive: true });
     const res = await fetch(FONTS[weight]);
     if (!res.ok) throw new Error(`Archivo ${weight} download failed: HTTP ${res.status}`);
-    await writeFile(file, Buffer.from(await res.arrayBuffer()));
+    // Write then rename, so an interrupted build can't leave a truncated font in the cache.
+    const partial = `${file}.${process.pid}.part`;
+    await writeFile(partial, Buffer.from(await res.arrayBuffer()));
+    await rename(partial, file);
   }
   const buf = await readFile(file);
   return opentype.parse(buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength));
@@ -231,7 +234,7 @@ async function main() {
   for (const [name, art] of Object.entries(logos)) {
     const svg = svgDoc(art, "Flypack");
     await out(`${name}.svg`, svg);
-    await out(`${name}.png`, png(svg, name.includes("mark") ? 512 : 1200));
+    await out(`${name}.png`, png(svg, name.startsWith("logo/flypack-mark-") ? 512 : 1200));
   }
 
   // App icons: square for app stores (the OS applies its own corner mask), rounded for web and decks.
@@ -302,7 +305,7 @@ async function main() {
   );
 
   // Social cards, 1200x630.
-  const tagline = textOutline(regular, TAGLINE, 48);
+  const tagline = textOutline(regular, TAGLINE, 36);
   for (const [theme, bg, markTheme, text, sub] of [
     ["dark", STAGE, MARKS.dark, WHITE, MUTED_DARK],
     ["light", WHITE, MARKS.light, INK, MUTED_LIGHT],

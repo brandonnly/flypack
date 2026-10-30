@@ -6,25 +6,29 @@
 
 ## The tagline
 
-> Show up knowing.
+> Plan every cable, rack and route before the show.
 
-- **Direction:** the outcome, said with confidence
-- **Picked:** 2026-10-30, in round three
+- **Direction:** descriptive. It says what Flypack does and when it pays off.
+- **Picked:** 2026-10-30, by Brandon, reworking the original placeholder ("…for the show") into "…before the show"
 - **Used on:** the Open Graph cards (`social/`) and the brand kit cover in Paper
-- **Check:** an exact-phrase web search found no other product, AV or otherwise, using it. That was a courtesy search, not a trademark check.
 
 ## What was said along the way
 
 - Round one: the "what you can stop doing" direction was the closest.
-- Round two: none of the lines landed. They read as too negative ("stop", "no more") and too literal, like feature descriptions.
-- Round three asked for confident, positive lines with attitude. "Show up knowing." was picked.
+- Round two: none of the lines landed. They read as too negative ("stop", "no more") and too literal.
+- Round three: "Show up knowing." was picked, then dropped as too vague.
+- Short attitude lines ("Down to the last cable.", "Plan it here. Build it there.") didn't land either. The descriptive line was the one that read as written by a person.
+- **What works:** concrete crew nouns (cable, rack, route) and a real moment ("before the show").
 - **Words to avoid:** "stop", "no more", and any word from the name ("pack", "fly"). Lines that lean on the name read as generic.
+- A short line for under the logo or for stickers can come later, ideally from how crews describe Flypack once they use it.
 
 ## Other lines shown (don't propose these again)
 
 | Line | Round | Why not |
 | --- | --- | --- |
-| Plan every cable, rack and route for the show. | placeholder | A list of three that describes features |
+| Show up knowing. | 3 | Picked, then dropped as too vague |
+| Down to the last cable. / Every show, down to the last cable. / Planned down to the last cable. / Wire the show before you get there. / Wired before you walk in. / Know every run before the truck rolls. / Patched, racked and routed before doors. / Every cable planned before the truck rolls. | 4 | Not picked |
+| Know where everything goes. / The plan for every cable. / Plan it here. Build it there. / Plan the show. Then run it. / Every cable has a place. / Show planning for the people who build it. | 5 | Not picked |
 | Say the patch. Flypack draws it. / Talk to it like your A2. / Call it. Cable it. | earlier rounds | "Call it. Cable it." didn't make sense; the voice angle promises a feature that isn't built yet |
 | Pack the show before the truck. / Packed to fly. / Pack once. Fly anywhere. / Your whole show, in one case. | earlier rounds | Too generic; lean on the name |
 | Know what goes where before you arrive. / The whole show, planned before load-in. | 1 | Not picked |

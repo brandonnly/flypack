@@ -5,16 +5,18 @@
 ## Setup
 
 ```sh
-pnpm add @fontsource-variable/archivo @fontsource-variable/jetbrains-mono
+pnpm add shadcn @fontsource-variable/archivo @fontsource-variable/jetbrains-mono
 ```
 
+`shadcn/tailwind.css` comes from the `shadcn` package. The last import is relative to `globals.css`, so adjust it to where that file sits: from `src/app/globals.css` with `brand/` at the repository root, the path is `../../brand/tokens/flypack.css`.
+
 ```css
-/* globals.css */
+/* src/app/globals.css */
 @import "tailwindcss";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/archivo";
 @import "@fontsource-variable/jetbrains-mono";
-@import "../brand/tokens/flypack.css";
+@import "../../brand/tokens/flypack.css";
 ```
 
 Preload the one font file the first screen needs, `@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2`. Fontsource uses `font-display: swap`. The `Archivo Fallback` and `JetBrains Mono Fallback` faces in `flypack.css` are Arial and Courier New scaled to Archivo's and JetBrains Mono's metrics, so the swap doesn't shift layout.
