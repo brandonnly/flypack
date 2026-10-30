@@ -1,0 +1,281 @@
+/*
+ * Flypack design tokens: shadcn/ui (Base UI) + Tailwind v4.
+ *
+ * Import after Tailwind in the app's globals.css (path relative to that file; see README.md):
+ *   @import "tailwindcss";
+ *   @import "shadcn/tailwind.css";
+ *   @import "@fontsource-variable/archivo";
+ *   @import "@fontsource-variable/jetbrains-mono";
+ *   @import "../../brand/tokens/flypack.css";
+ *
+ * `dark:` matches the element carrying `.dark` and everything inside it.
+ *
+ * Every color pairing below was checked with WCAG 2 and APCA; see README.md.
+ * Rules the values depend on:
+ *   - Gaff yellow is a fill, never text, a link color or a focus ring on light surfaces.
+ *   - Text and controls that sit on yellow are ink, never white.
+ *   - Yellow means brand, live or selected, in both themes. Warnings are orange.
+ *   - Filled destructive buttons use `destructive-solid`; `destructive` is for error text.
+ *   - No yellow washes on dark surfaces: they turn olive. Mark selection with a yellow bar or text.
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Metric-matched fallbacks, so swapping in the web font doesn't shift layout. */
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial"), local("Liberation Sans");
+  size-adjust: 101.88%;
+  ascent-override: 86.18%;
+  descent-override: 20.61%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  src: local("Courier New"), local("Liberation Mono");
+  size-adjust: 100%;
+  ascent-override: 102%;
+  descent-override: 30%;
+  line-gap-override: 0%;
+}
+
+@theme {
+  --font-sans: "Archivo Variable", "Archivo Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono Fallback", ui-monospace, monospace;
+
+  /* Gaff yellow, one hue. 500 is the brand yellow, #F5C400. */
+  --color-gaff-50: oklch(0.975 0.011 90.432);
+  --color-gaff-100: oklch(0.95 0.032 90.432);
+  --color-gaff-200: oklch(0.91 0.082 90.432);
+  --color-gaff-300: oklch(0.87 0.145 90.432);
+  --color-gaff-500: oklch(0.84 0.172 90.432);
+  --color-gaff-600: oklch(0.68 0.132 90.432);
+  --color-gaff-700: oklch(0.56 0.103 90.432);
+  --color-gaff-800: oklch(0.45 0.078 90.432);
+  --color-gaff-900: oklch(0.35 0.054 90.432);
+
+  /* Case neutrals, pure gray. 950 is ink #111111, 975 is the dark-mode stage black #0A0A0A. */
+  --color-case-50: oklch(0.985 0 0);
+  --color-case-100: oklch(0.967 0 0);
+  --color-case-200: oklch(0.922 0 0);
+  --color-case-300: oklch(0.87 0 0);
+  --color-case-400: oklch(0.78 0 0);
+  --color-case-500: oklch(0.62 0 0);
+  --color-case-600: oklch(0.52 0 0);
+  --color-case-700: oklch(0.44 0 0);
+  --color-case-800: oklch(0.321 0 0);
+  --color-case-900: oklch(0.226 0 0);
+  --color-case-950: oklch(0.178 0 0);
+  --color-case-975: oklch(0.145 0 0);
+
+  /* Type scale by role. Tailwind's text-xs…text-9xl stay available for shadcn components. */
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.333;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.385;
+  --text-ui: 0.875rem;
+  --text-ui--line-height: 1.429;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.556;
+  --text-title: 1.25rem;
+  --text-title--line-height: 1.4;
+  --text-title--letter-spacing: -0.01em;
+  --text-heading: 1.5rem;
+  --text-heading--line-height: 1.25;
+  --text-heading--letter-spacing: -0.02em;
+  --text-display-sm: 2rem;
+  --text-display-sm--line-height: 1.125;
+  --text-display-sm--letter-spacing: -0.03em;
+  --text-display: 3rem;
+  --text-display--line-height: 1.083;
+  --text-display--letter-spacing: -0.035em;
+  --text-display-lg: 4.5rem;
+  --text-display-lg--line-height: 1.056;
+  --text-display-lg--letter-spacing: -0.045em;
+
+  /* Small uppercase mono labels, and the wordmark's tracking. */
+  --tracking-label: 0.06em;
+  --tracking-wordmark: -0.045em;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.178 0 0); /* case-950 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.178 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.178 0 0);
+
+  /* Primary is ink on light: yellow fills fail 3:1 as control boundaries on white. */
+  --primary: oklch(0.178 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.967 0 0); /* case-100 */
+  --secondary-foreground: oklch(0.178 0 0);
+  --muted: oklch(0.967 0 0);
+  --muted-foreground: oklch(0.52 0 0); /* case-600, 5.5:1 on white */
+  --accent: oklch(0.967 0 0);
+  --accent-foreground: oklch(0.178 0 0);
+  --destructive: oklch(0.53 0.173 27); /* white text on it 5.8:1 */
+  --destructive-solid: oklch(0.53 0.173 27); /* filled destructive buttons */
+
+  --border: oklch(0.922 0 0); /* case-200, decorative only */
+  --input: oklch(0.62 0 0); /* case-500, 3.6:1 control edge */
+  --ring: oklch(0.178 0 0); /* ink; at /50 still 3.5:1 on white */
+
+  --chart-1: oklch(0.178 0 0);
+  --chart-2: oklch(0.6 0.11 90.432);
+  --chart-3: oklch(0.55 0.132 250);
+  --chart-4: oklch(0.58 0.136 150);
+  --chart-5: oklch(0.55 0.22 300);
+
+  --sidebar: oklch(0.985 0 0); /* case-50 */
+  --sidebar-foreground: oklch(0.178 0 0);
+  --sidebar-primary: oklch(0.178 0 0);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.967 0 0);
+  --sidebar-accent-foreground: oklch(0.178 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.178 0 0);
+
+  /* Flypack additions. */
+  --brand: oklch(0.84 0.172 90.432); /* gaff-500: CTA fill, live, selection */
+  --brand-foreground: oklch(0.178 0 0);
+  --live: oklch(0.84 0.172 90.432);
+  --destructive-foreground: oklch(1 0 0);
+  --warning: oklch(0.53 0.105 55);
+  --warning-foreground: oklch(1 0 0);
+  --success: oklch(0.53 0.117 150);
+  --success-foreground: oklch(1 0 0);
+  --info: oklch(0.53 0.12 250);
+  --info-foreground: oklch(1 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0); /* case-975, #0A0A0A */
+  --foreground: oklch(0.985 0 0); /* case-50 */
+  --card: oklch(0.178 0 0); /* case-950, brand ink */
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.178 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  /* Primary is white on dark, so yellow keeps meaning brand, live or selected. */
+  --primary: oklch(0.985 0 0); /* case-50 */
+  --primary-foreground: oklch(0.178 0 0);
+  --secondary: oklch(0.226 0 0); /* case-900 */
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.226 0 0);
+  --muted-foreground: oklch(0.78 0 0); /* case-400, Lc 60+ */
+  --accent: oklch(0.226 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.78 0.103 27); /* error text and outlines: 9:1, Lc 61 */
+  --destructive-solid: oklch(0.53 0.173 27); /* filled buttons: white label 5.8:1 */
+
+  --border: oklch(0.321 0 0); /* case-800, decorative only */
+  --input: oklch(0.52 0 0); /* case-600, 3.4:1 control edge on cards */
+  --ring: oklch(0.84 0.172 90.432); /* yellow; at /50 still 3.6:1 on ink */
+
+  --chart-1: oklch(0.84 0.172 90.432);
+  --chart-2: oklch(0.922 0 0);
+  --chart-3: oklch(0.72 0.129 250);
+  --chart-4: oklch(0.76 0.167 150);
+  --chart-5: oklch(0.7 0.139 300);
+
+  --sidebar: oklch(0.178 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(0.178 0 0);
+  --sidebar-accent: oklch(0.226 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.321 0 0);
+  --sidebar-ring: oklch(0.84 0.172 90.432);
+
+  --brand: oklch(0.84 0.172 90.432);
+  --brand-foreground: oklch(0.178 0 0);
+  --live: oklch(0.84 0.172 90.432);
+  --destructive-foreground: oklch(1 0 0);
+  --warning: oklch(0.78 0.119 55);
+  --warning-foreground: oklch(0.178 0 0);
+  --success: oklch(0.78 0.172 150);
+  --success-foreground: oklch(0.178 0 0);
+  --info: oklch(0.78 0.093 250);
+  --info-foreground: oklch(0.178 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-live: var(--live);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-solid: var(--destructive-solid);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-synthesis: none;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* Ink on yellow: 11.5:1 in both themes. */
+  ::selection {
+    background-color: var(--brand);
+    color: var(--brand-foreground);
+  }
+}
