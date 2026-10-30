@@ -1,0 +1,14 @@
+docs/research/2026-10-30-canvas-and-stage-map-libraries.md
+  h_a875e02037e865 1-693
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e19cf97b1658823e2b8e08624634ce974119411a",
+  "prompts": {},
+  "humans": {
+    "h_a875e02037e865": {
+      "author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
