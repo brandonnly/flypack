@@ -12,3 +12,6 @@ node_modules/
 *.pfx
 .dev.vars
 .convex/
+
+# Private working files, such as the reference show
+.tmp/
