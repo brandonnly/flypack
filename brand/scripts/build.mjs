@@ -29,7 +29,7 @@ const FONTS = {
 };
 
 const WORDMARK_TRACKING = -0.045; // em
-const TAGLINE = "Plan every cable, rack and route for the show.";
+const TAGLINE = "Show up knowing."; // see brand/TAGLINE.md
 
 async function loadFont(weight) {
   const file = join(cache, `archivo-${weight}.ttf`);
@@ -302,7 +302,7 @@ async function main() {
   );
 
   // Social cards, 1200x630.
-  const tagline = textOutline(regular, TAGLINE, 34);
+  const tagline = textOutline(regular, TAGLINE, 48);
   for (const [theme, bg, markTheme, text, sub] of [
     ["dark", STAGE, MARKS.dark, WHITE, MUTED_DARK],
     ["light", WHITE, MARKS.light, INK, MUTED_LIGHT],

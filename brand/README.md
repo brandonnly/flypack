@@ -4,6 +4,8 @@
 
 The mark is a cable route drawn as an F: a pad where the cable starts, a dot where it ends, and a pad where the crossbar lands. The wordmark is Archivo ExtraBold at −0.045em tracking, converted to outlines, so no file here needs the font installed.
 
+Tagline: **Show up knowing.** How it was chosen, and the lines that were turned down, are in [TAGLINE.md](TAGLINE.md).
+
 Design source: the "Brand kit v1" page of the Paper file [Flypack — Logo exploration](https://app.paper.design/file/01M65S3PQBM4ZSMGEAZ3F78QB6).
 
 ## What's here
