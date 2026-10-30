@@ -33,6 +33,22 @@ one as published.
 - **touch a brand asset or the tagline**: read [brand/README.md](brand/README.md).
 - **decide** anything about the product or architecture: read [docs/PRODUCT.md](docs/PRODUCT.md)
   and `docs/adr/`, then record the decision as the next numbered ADR.
-- **open or land a PR**: code lands as a squash-merged PR titled `<type>(<scope>): <subject>`,
-  with before and after screenshots for UI changes. Plans, ADRs, research and agent docs may go
-  straight to `main` as `docs(<scope>): ...`.
+- **open, push to or land a PR, or push docs to `main`**: read
+  [docs/agents/pull-requests.md](docs/agents/pull-requests.md).
+- **deliver `ready-for-agent` work unattended, or review a diff with subagents**: follow
+  [docs/agents/afk-slice-workflow.md](docs/agents/afk-slice-workflow.md).
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues in `brandonnly/flypack`, through `gh`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+The five default labels: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`,
+`wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: one `GLOSSARY.md` at the root and `docs/adr/`. See `docs/agents/domain.md`.
