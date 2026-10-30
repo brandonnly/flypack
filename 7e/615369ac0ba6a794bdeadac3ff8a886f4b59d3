@@ -1,0 +1,14 @@
+docs/research/2026-10-30-convex-stack-fit.md
+  h_a875e02037e865 1-500
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7e615369ac0ba6a794bdeadac3ff8a886f4b59d3",
+  "prompts": {},
+  "humans": {
+    "h_a875e02037e865": {
+      "author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
