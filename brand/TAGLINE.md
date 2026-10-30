@@ -22,7 +22,9 @@
 - **Words to avoid:** "stop", "no more", and any word from the name ("pack", "fly"). Lines that lean on the name read as generic.
 - A short line for under the logo or for stickers can come later, ideally from how crews describe Flypack once they use it.
 
-## Other lines shown (don't propose these again)
+## Lines already shown
+
+New tagline work starts from lines that are not in this table.
 
 | Line | Round | Why not |
 | --- | --- | --- |

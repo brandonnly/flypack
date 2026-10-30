@@ -1,7 +1,5 @@
 # Flypack product brief
 
-**Tagline:** Plan every cable, rack and route before the show.
-
 Flypack is the planning kit a production crew carries from show to show: every patch, rack,
 cable run and network plan for a show in one place, built as fast by talking to an agent as by
 dragging boxes. A flypack is the road-cased rig you roll into a venue; this is the plan that
@@ -33,14 +31,9 @@ sheets taped to racks.
 
 ## Why it can exist
 
-From the [research](research/2026-10-29-agent-first-patching-tool.md):
-
-- No existing tool connects the logical patch (port to port) with the physical route (measured
-  on the venue's drawing) and network detail (IPs, VLANs, Dante).
-- MCP support is thin. WireFlow has a remote MCP server, EasySchematic a local one in beta, and
-  LZ Cable Planner a local one in a proprietary app. Patchify has no API.
-- Flypack is open source under AGPL-3.0 and may later be offered as a hosted service
-  ([ADR 0001](adr/0001-agpl-license.md)).
+No existing tool connects the logical patch (port to port) with the physical route (measured on
+the venue's drawing) and network detail (IPs, VLANs, Dante), and MCP support across them is thin.
+The [research](research/2026-10-29-agent-first-patching-tool.md) compares each one.
 
 ## Decided
 
@@ -48,7 +41,7 @@ From the [research](research/2026-10-29-agent-first-patching-tool.md):
 | --- | --- |
 | AGPL-3.0, everything public | [ADR 0001](adr/0001-agpl-license.md) |
 | shadcn/ui on Base UI, Tailwind v4, Flypack tokens | [ADR 0002](adr/0002-ui-stack.md) |
-| Brand: route-F mark, Archivo, ink / gaff yellow / white, stage-black dark mode | [brand/README.md](../brand/README.md) |
+| Brand, tagline and design tokens | [brand/README.md](../brand/README.md) |
 
 ## Open for the wayfinder session
 

@@ -18,7 +18,7 @@ The repository is licensed AGPL-3.0. Everything a hosted Flypack runs lives in t
 
 - AGPL section 13: anyone who runs a modified Flypack for users over a network must offer those
   users its source. A hosted Flypack links to its source, ideally the exact deployed commit,
-  and never runs private patches.
+  and runs only code that is in this repository.
 - Secrets, environment files and infrastructure configuration stay out of the repository; the
   license covers the program, not them.
 - Every dependency must be compatible. MIT, Apache-2.0 and BSD are fine. ELK.js (EPL-2.0) is

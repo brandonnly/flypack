@@ -2,27 +2,21 @@
 
 ![Flypack brand kit](preview.png)
 
-The mark is a cable route drawn as an F: a pad where the cable starts, a dot where it ends, and a pad where the crossbar lands. The wordmark is Archivo ExtraBold at −0.045em tracking, converted to outlines, so no file here needs the font installed.
+The mark is a cable route drawn as an F: a pad where the cable starts, a dot where it ends, and a
+pad where the crossbar lands. The wordmark is Archivo ExtraBold at −0.045em tracking, converted
+to outlines, so no file here needs the font installed.
 
-Tagline: **Plan every cable, rack and route before the show.** How it was chosen, and the lines that were turned down, are in [TAGLINE.md](TAGLINE.md).
+Tagline: **Plan every cable, rack and route before the show.** [TAGLINE.md](TAGLINE.md) records
+how it was chosen and every line already turned down.
 
-Design source: the "Brand kit v1" page of the Paper file [Flypack — Logo exploration](https://app.paper.design/file/01M65S3PQBM4ZSMGEAZ3F78QB6).
-
-## What's here
-
-| Folder | Contents |
-| --- | --- |
-| `logo/` | Horizontal and stacked lockups, wordmark, and mark, as SVG and PNG |
-| `app-icon/` | App icons: light, dark and tinted (full-bleed squares for app stores) plus rounded versions for web and decks, as SVG and 1024px PNG |
-| `favicon/` | `favicon.svg`, `favicon.ico`, PNG favicons, Apple touch icon, PWA icons and `site.webmanifest` |
-| `social/` | Open Graph cards, 1200×630, dark and light |
-| `tokens/` | `flypack.css`: every shadcn/ui and Tailwind v4 color, font and type token. See [tokens/README.md](tokens/README.md) |
-| `scripts/` | `build.mjs`, which generates everything above |
-| `explorations/` | Earlier logo rounds, kept for reference |
-
-In file names, `light` and `dark` describe the background the asset goes on. `black` and `white` are single-color versions for print, embroidery and engraving.
+Design source: the "Brand kit v1" page of the Paper file
+[Flypack — Logo exploration](https://app.paper.design/file/01M65S3PQBM4ZSMGEAZ3F78QB6).
+Earlier rounds are in `explorations/`.
 
 ## Which file to use
+
+In file names, `light` and `dark` name the background the asset sits on; `black` and `white` are
+one-color versions for print, embroidery and engraving.
 
 | Where | File |
 | --- | --- |
@@ -31,11 +25,32 @@ In file names, `light` and `dark` describe the background the asset goes on. `bl
 | Square spaces, splash screens | `logo/flypack-stacked-light.svg` or `-dark.svg` |
 | Avatars, social profiles | `app-icon/app-icon-light-rounded-1024.png` |
 | One-color print | `logo/flypack-horizontal-black.svg` or `-white.svg` |
-| Tiny spaces (under 96px wide) | The mark alone: `logo/flypack-mark-light.svg` or `-dark.svg` |
+| Under 96px wide | The mark alone: `logo/flypack-mark-light.svg` or `-dark.svg` |
+| Link previews | `social/og-dark.png` or `og-light.png` |
+
+## Logo rules
+
+- Use the mark as supplied: original colors and proportions, all three endpoints, on a
+  background it contrasts with (the yellow tile takes the ink mark).
+- Keep clear space around the logo equal to twice the height of the yellow dot.
+- Below 96px wide, use the mark alone.
+
+## Colors
+
+| Name | Hex | Role |
+| --- | --- | --- |
+| Case Ink | `#111111` | Text, marks, dark-mode cards |
+| Gaff Yellow | `#F5C400` | Brand, live, selection |
+| White | `#FFFFFF` | Light background |
+| Stage Black | `#0A0A0A` | Dark-mode background |
+
+How to use them in UI, with the contrast behind each rule: [tokens/README.md](tokens/README.md).
 
 ## Favicons
 
-Copy everything in `favicon/` to the site's public root, then add the tags below. They assume the site is served from the domain root; on a site under a path prefix such as `/flypack/`, prefix every `href` here and every `src` in `site.webmanifest`.
+Copy everything in `favicon/` to the site's public root, then add the tags below. They assume
+the site is served from the domain root; under a path prefix such as `/flypack/`, prefix every
+`href` here and every `src` in `site.webmanifest`.
 
 ```html
 <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -46,33 +61,24 @@ Copy everything in `favicon/` to the site's public root, then add the tags below
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0A0A" />
 ```
 
-- `favicon.svg` switches between the yellow tile and the ink tile with the browser's color scheme.
-- The 16px and 32px bitmaps use ink endpoints, because white endpoints wash out on yellow at that size.
-- `icon-maskable-*.png` keeps the mark inside Android's safe zone, so circular and squircle masks don't clip it.
+- `favicon.svg` follows the browser's color scheme: yellow tile in light, ink tile in dark.
+- The 16px and 32px bitmaps use ink endpoints, which stay visible on yellow at that size.
+- `icon-maskable-*.png` keeps the mark inside Android's safe zone for circular and squircle
+  masks.
 
 ## App icons
 
-- **iOS and macOS:** use `app-icon-light-1024.png`, `app-icon-dark-1024.png` and `app-icon-tinted-1024.png` as the Any, Dark and Tinted appearances in the asset catalog. They are full-bleed squares; the system applies the corner mask.
-- **Android:** the adaptive icon background is Gaff Yellow `#F5C400`. The foreground is the mark as drawn in `app-icon-light.svg` (ink route, white endpoints), scaled down to sit inside the safe zone; `favicon/icon-maskable-512.png` shows the right size.
+- **iOS and macOS:** `app-icon-light-1024.png`, `app-icon-dark-1024.png` and
+  `app-icon-tinted-1024.png` are the Any, Dark and Tinted appearances in the asset catalog. They
+  are full-bleed squares; the system applies the corner mask.
+- **Android:** the adaptive icon background is Gaff Yellow. The foreground is the mark as drawn in
+  `app-icon-light.svg` (ink route, white endpoints), scaled to the safe zone that
+  `favicon/icon-maskable-512.png` shows.
 
-## Colors
+## Changing an asset
 
-| Name | Hex | Use |
-| --- | --- | --- |
-| Case Ink | `#111111` | Text, marks, dark-mode cards |
-| Gaff Yellow | `#F5C400` | Brand, live, selection; never as text on light backgrounds |
-| White | `#FFFFFF` | Light background |
-| Stage Black | `#0A0A0A` | Dark-mode background |
-
-The full system, with contrast checks, is in [tokens/README.md](tokens/README.md).
-
-## Rules
-
-- Keep clear space around the logo equal to twice the height of the yellow dot.
-- Don't recolor the route, stretch the mark, drop an endpoint, or put the yellow mark on yellow.
-- Below 96px wide, use the mark alone instead of the lockup.
-
-## Rebuilding
+Every file in `logo/`, `app-icon/`, `favicon/`, `social/` and `preview.png` is generated. Edit
+`scripts/build.mjs`, then:
 
 ```sh
 cd brand/scripts
@@ -80,4 +86,6 @@ pnpm install
 pnpm build
 ```
 
-The script downloads static Archivo instances from Google Fonts into `scripts/.cache/` on first run. Archivo is licensed under the SIL Open Font License, which allows logos made from it.
+The change is done when `preview.png` and each affected output show it, and the build lists no
+errors. The first run downloads static Archivo instances from Google Fonts into
+`scripts/.cache/`; Archivo's SIL Open Font License allows logos made from it.

@@ -13,18 +13,14 @@ contrast-checked against shadcn's token set in light and dark themes.
 ## Decision
 
 - Components are shadcn/ui on Base UI primitives, styled with Tailwind v4.
-- `brand/tokens/flypack.css` is the only source of colors, fonts, the type scale and radius. The
-  app imports it after Tailwind and defines no colors of its own.
-- Fonts are self-hosted through Fontsource: Archivo for display and UI, JetBrains Mono for cable
-  IDs, ports, IPs and lengths.
+- `brand/tokens/flypack.css` is the single source of colors, fonts, type sizes and radius. The
+  app imports it after Tailwind.
+- Fonts are self-hosted through Fontsource: Archivo for display and UI, JetBrains Mono for data.
 
 ## Consequences
 
-- `primary` is ink in light mode and white in dark mode. Gaff yellow is reserved for brand,
-  live, selection and focus in both themes, and is never text on a light surface.
-- Dark mode is stage black `#0A0A0A` with ink `#111111` cards and pure neutral grays.
-- Our copy of shadcn's Button fills its destructive variant with `destructive-solid`, as
-  `brand/tokens/README.md` shows.
-- Status colors are separate from yellow: warnings are orange, so a warning never reads as "live".
-- Changing a token means re-checking contrast; the checked pairs are listed in
-  `brand/tokens/README.md`.
+- The color and type rules, each with the contrast measurement behind it, live in
+  `brand/tokens/README.md`. That file changes whenever a token does.
+- shadcn's dark theme is replaced: yellow is reserved for brand and live states, so `primary` is
+  ink in light mode and white in dark mode.
+- Our copy of shadcn's Button differs from upstream in its destructive variant.
