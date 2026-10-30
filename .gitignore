@@ -1,3 +1,14 @@
 node_modules/
 .cache/
 .DS_Store
+
+# Secrets: commit .env.example only
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.dev.vars
+.convex/

@@ -29,6 +29,26 @@ session that starts from [the research notes](docs/research/2026-10-29-agent-fir
   yellow `#F5C400` means brand, live or selected, and is never text on a light surface. The full
   rules are in [brand/tokens/README.md](brand/tokens/README.md).
 
+## Secrets: this repository is public
+
+Every commit, PR, issue, review comment, CI log and screenshot is public and permanent.
+
+- **Secrets come from environment variables at runtime, and nowhere else.** No keys, tokens,
+  passwords or connection strings in code, config, tests, fixtures, docs or comments, and no
+  real values as defaults (`process.env.X ?? "sk-..."`). Read them in one config module that
+  fails fast, naming the missing variable but never printing a value.
+- **Env files stay local.** `.env` and `.env.*` are gitignored. Commit `.env.example` with every
+  variable name and a placeholder value only.
+- **Nothing secret reaches the browser.** Variables with a public prefix (`VITE_`,
+  `NEXT_PUBLIC_`, `PUBLIC_`) are bundled into client code. Only public identifiers go there.
+- **Never echo a value.** Not in logs, error messages, test snapshots, PR bodies, issue comments
+  or screenshots. Redact before posting command output. When a secret is needed, ask the
+  developer to set it; never ask them to paste it into chat.
+- **Before every commit, check the diff for secrets**, including generated files and lockfiles.
+- **A leaked secret is burned.** If one is committed or posted anywhere public, rotate it first,
+  then remove it. Rewriting history does not un-leak it.
+- Keep machine-specific details out too: hostnames, ports, home paths and internal URLs.
+
 ## Before you…
 
 - **design or build UI**: read [brand/tokens/README.md](brand/tokens/README.md)
