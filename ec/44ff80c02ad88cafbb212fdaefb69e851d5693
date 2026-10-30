@@ -1,0 +1,28 @@
+brand/TAGLINE.md
+  s_b7c03e4d4dc655::t_ff69c869e66c40 1-35
+brand/scripts/build.mjs
+  s_b7c03e4d4dc655::t_5a7701b2bc81b7 305
+  s_b7c03e4d4dc655::t_ab6de87dc55d00 32
+brand/README.md
+  s_b7c03e4d4dc655::t_669871b82a6481 7-8
+brand/social/og-dark.svg
+  s_b7c03e4d4dc655::t_5faa394671ec1f 1
+brand/social/og-light.svg
+  s_b7c03e4d4dc655::t_0acf6899db59a9 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ec44ff80c02ad88cafbb212fdaefb69e851d5693",
+  "prompts": {},
+  "sessions": {
+    "s_b7c03e4d4dc655": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3561a736-c1d1-49d3-a15d-4f434a7ea0a4",
+        "model": "unknown"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
