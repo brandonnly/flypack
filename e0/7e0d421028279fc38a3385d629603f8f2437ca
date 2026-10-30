@@ -1,0 +1,19 @@
+docs/research/2026-10-30-device-library-coverage.md
+  s_5b4f6dc5ed2dc4::t_35ad82cc134937 1-274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e07e0d421028279fc38a3385d629603f8f2437ca",
+  "prompts": {},
+  "sessions": {
+    "s_5b4f6dc5ed2dc4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84e3103b-be77-4f20-9d7f-368c162e7991",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
