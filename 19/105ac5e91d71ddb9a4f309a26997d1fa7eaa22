@@ -1,0 +1,19 @@
+docs/research/2026-10-30-webmcp-and-agent-panel.md
+  s_e16c1590765590::t_75f711049ccaec 1-386
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "19105ac5e91d71ddb9a4f309a26997d1fa7eaa22",
+  "prompts": {},
+  "sessions": {
+    "s_e16c1590765590": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3cbdeafd-2410-48ea-a865-547b9c0982df",
+        "model": "unknown"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
