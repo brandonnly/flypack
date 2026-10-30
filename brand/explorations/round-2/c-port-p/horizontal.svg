@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-labelledby="t d">
+  <title id="t">Flypack logo (c-port-p)</title>
+  <desc id="d">Port p: a lowercase p whose bowl is a connector port with a live pin</desc>
+  <g>
+  <g fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round">
+    <circle cx="35" cy="27" r="13"/>
+    <path d="M22 27V54"/>
+  </g>
+  <circle cx="35" cy="27" r="5" fill="#F5C400"/>
+  </g>
+  <text x="80" y="46" font-family="Archivo, Arial Black, sans-serif" font-weight="800" font-size="46" letter-spacing="-1.9" fill="#111111">flypack</text>
+</svg>

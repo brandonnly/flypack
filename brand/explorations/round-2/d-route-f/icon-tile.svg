@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Flypack icon (d-route-f, icon-tile)</title>
+  <desc id="d">Route f: an F drawn as one orthogonal cable route with terminal pads</desc>
+  <rect width="64" height="64" rx="14" fill="#F5C400"/>
+  <g fill="none" stroke="#111111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 51H24V21Q24 14 31 14H45"/>
+    <path d="M24 33H38"/>
+  </g>
+  <rect x="9" y="46" width="10" height="10" rx="2" fill="#111111"/>
+  <circle cx="48" cy="14" r="5.5" fill="#FFFFFF"/>
+  <rect x="38" y="28" width="10" height="10" rx="2" fill="#FFFFFF"/>
+</svg>

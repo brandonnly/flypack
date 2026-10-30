@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" role="img" aria-labelledby="t d">
+  <title id="t">Flypack logo (tape wordmark)</title>
+  <desc id="d">Tape: fp written on a torn strip of yellow gaff tape</desc>
+  <rect width="340" height="80" fill="#111111"/>
+  <polygon points="6,8 330,8 336,20 328,32 337,44 329,56 335,66 330,72 6,72 1,62 8,52 0,40 8,28 1,18" fill="#F5C400"/>
+  <text x="168" y="58" text-anchor="middle" font-family="Archivo, Arial Black, sans-serif" font-weight="900" font-size="54" letter-spacing="-2" fill="#111111">flypack</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Flypack icon (b-case, icon-dark)</title>
+  <desc id="d">Case: a road case front with corner brackets and a handle</desc>
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="#F5C400"/>
+  <g fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 22V11H22M42 11H53V22M53 42V53H42M22 53H11V42"/>
+    <rect x="21" y="27" width="22" height="10" rx="5"/>
+  </g>
+</svg>

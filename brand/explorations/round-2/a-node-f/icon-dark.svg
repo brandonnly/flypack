@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">Flypack icon (a-node-f, icon-dark)</title>
+  <desc id="d">Node f: a lowercase f built from cable links and port nodes; the light node is the live signal</desc>
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 51V25Q27 14 38 14H43"/>
+    <path d="M18 31H35"/>
+  </g>
+  <circle cx="45" cy="14" r="5.5" fill="#FFFFFF"/>
+  <circle cx="27" cy="51" r="5.5" fill="#FFFFFF"/>
+  <circle cx="40" cy="31" r="6" fill="#F5C400"/>
+</svg>
