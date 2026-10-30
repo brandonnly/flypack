@@ -1,0 +1,21 @@
+GLOSSARY.md
+  s_e16c1590765590::t_c873f6375ac0fd 1-39
+.gitignore
+  s_e16c1590765590::t_92e2ad0f145481 15-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9a7a4438ec91f3f7866be1733452a7f99b040b7d",
+  "prompts": {},
+  "sessions": {
+    "s_e16c1590765590": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3cbdeafd-2410-48ea-a865-547b9c0982df",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
