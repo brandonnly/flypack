@@ -1,0 +1,28 @@
+AGENTS.md
+  s_b7c03e4d4dc655::t_5c647e3a38b1f9 1-43
+CLAUDE.md
+  s_b7c03e4d4dc655::t_84ad0e546ad8b3 1
+docs/PRODUCT.md
+  s_b7c03e4d4dc655::t_f7081c356936fc 1-58,60-74
+  s_b7c03e4d4dc655::t_26f1338f541ac3 59
+docs/adr/0002-ui-stack.md
+  s_b7c03e4d4dc655::t_130940fcb8891b 1-30
+docs/adr/0001-agpl-license.md
+  s_b7c03e4d4dc655::t_b7355d3659b949 1-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "08661e7dca1893fdb20655461f01dc76a468d1a9",
+  "prompts": {},
+  "sessions": {
+    "s_b7c03e4d4dc655": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3561a736-c1d1-49d3-a15d-4f434a7ea0a4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
