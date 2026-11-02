@@ -46,11 +46,11 @@ original brief, the earlier findings and the responses to them. Each reviewer re
 with file, line, severity and a concrete failure scenario, and ends with one line:
 `SAFE TO MERGE` or `HOLD: <reason>`.
 
-A failure scenario starts from something real usage reaches: a caller in the code, input a user
-or an agent through the MCP server can send, a platform the repo supports, or a tool its checks
-run. A scenario that reaches none of these is not a finding. A limit real usage could pass but
-nothing nears needs only a named cap that detects overflow and logs it, or refuses where it guards
-another project's or organization's data.
+Report a finding only when its failure scenario is reachable: real usage gets there through a caller
+in the code, input a user or an agent through the MCP server can send, a race, a deploy window, a
+platform the repo supports, or a tool its checks run. A limit real usage could pass but nothing
+nears needs only a named cap that detects overflow and logs it, or refuses where it guards another
+project's or organization's data.
 
 1. **Security and exposure**: authorization on every query, mutation and MCP tool; identity taken
    from the session, never from arguments; project and organization scoping; agent writes limited
@@ -68,9 +68,9 @@ another project's or organization's data.
 6. **Spec and docs adherence**: the diff against the ticket, the spec, `docs/PRODUCT.md`, the
    ADRs, the glossary, and `brand/tokens/README.md` for UI. Flag every deviation.
 
-Fix every confirmed finding, or decline it with a one-line reason kept for the PR body. An
-unreachable finding is declined the same way and never becomes an issue. Repeat rounds until
-every lens returns `SAFE TO MERGE`.
+Fix every confirmed finding, or decline it with a one-line reason kept for the PR body. Decline an
+unreachable finding the same way; that reason is its whole record. Repeat rounds until every lens
+returns `SAFE TO MERGE`.
 
 ## 4. Push
 

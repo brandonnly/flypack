@@ -4,12 +4,11 @@ version: 1
 
 reviews:
   custom_instructions: >-
-    This repository is public. Apply the "Public repository" rules in AGENTS.md and flag any
-    secret, credential, personal data or machine-specific detail in code, fixtures, logs or docs.
-    Check new dependencies and copied code against docs/adr/0001-agpl-license.md. For UI, apply
-    brand/tokens/README.md. Cite the rule for each finding. Start each failure scenario from
-    something real usage reaches, as "3. Review rounds" in docs/agents/afk-slice-workflow.md says;
-    report nothing else.
+    This repository is public. Apply the "Public repository" rules in AGENTS.md and flag any secret,
+    credential, personal data or machine-specific detail in code, fixtures, logs or docs. Check new
+    dependencies and copied code against docs/adr/0001-agpl-license.md. For UI, apply
+    brand/tokens/README.md. Cite the rule for each finding. Report only reachable failure scenarios,
+    as "3. Review rounds" in docs/agents/afk-slice-workflow.md defines them.
   ignore:
     files:
       - "brand/logo/**"
