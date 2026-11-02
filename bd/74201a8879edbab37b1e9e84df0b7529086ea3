@@ -1,0 +1,19 @@
+docs/agents/pull-requests.md
+  s_efde17f6dca003::t_2d26ca6fe79ba0 31-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bd74201a8879edbab37b1e9e84df0b7529086ea3",
+  "prompts": {},
+  "sessions": {
+    "s_efde17f6dca003": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2d0b68ed-b141-447e-a681-32c61a895063",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
