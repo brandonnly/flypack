@@ -28,9 +28,10 @@ How a change reaches `main`.
 
 ## Evidence
 
-A UI change shows before and after screenshots, and a video when motion matters. Commit them to an
-orphan `<branch>-screenshots` branch and embed them with `?raw=true` blob URLs. Screenshots are
-public: crop out secrets, personal data and anything machine-specific.
+A UI change shows before and after screenshots, and a video when motion matters. Open the PR first
+(a draft is fine), then upload them with `pr-media` (the `pr-media` skill has the steps) and put the
+markdown it prints in the body. Screenshots are public: crop out secrets, personal data and anything
+machine-specific.
 
 ## Landing
 
