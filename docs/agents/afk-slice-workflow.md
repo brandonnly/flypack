@@ -46,6 +46,12 @@ original brief, the earlier findings and the responses to them. Each reviewer re
 with file, line, severity and a concrete failure scenario, and ends with one line:
 `SAFE TO MERGE` or `HOLD: <reason>`.
 
+A failure scenario starts from something real usage reaches: a caller in the code, input a user
+or an agent through the MCP server can send, a platform the repo supports, or a tool its checks
+run. A scenario that reaches none of these is not a finding. A limit real usage could pass but
+nothing nears needs only a named cap that detects overflow and logs it, or refuses where it guards
+another project's or organization's data.
+
 1. **Security and exposure**: authorization on every query, mutation and MCP tool; identity taken
    from the session, never from arguments; project and organization scoping; agent writes limited
    to what the caller may change; input validation; and the "Public repository" rules in
@@ -62,8 +68,9 @@ with file, line, severity and a concrete failure scenario, and ends with one lin
 6. **Spec and docs adherence**: the diff against the ticket, the spec, `docs/PRODUCT.md`, the
    ADRs, the glossary, and `brand/tokens/README.md` for UI. Flag every deviation.
 
-Fix every confirmed finding, or decline it with a one-line reason kept for the PR body. Repeat
-rounds until every lens returns `SAFE TO MERGE`.
+Fix every confirmed finding, or decline it with a one-line reason kept for the PR body. An
+unreachable finding is declined the same way and never becomes an issue. Repeat rounds until
+every lens returns `SAFE TO MERGE`.
 
 ## 4. Push
 
@@ -75,10 +82,10 @@ validation run with its results.
 ## 5. Bot rounds
 
 CodeRabbit, cubic and Codex review each push on GitHub. Once checks are green, fix every Codex P1
-finding, and any other finding whose fix is a few lines in code the PR already changes. File the
-rest as GitHub issues labelled `needs-triage`. Answer every bot comment with a fix or a one-line
-reason. Keep a round's fixes as local commits and push them together, since every push starts
-another bot review.
+finding, and any other finding whose fix is a few lines in code the PR already changes. Decline
+unreachable findings with a one-line reason, and file the other confirmed findings as GitHub issues
+labelled `needs-triage`. Answer every bot comment with a fix or a one-line reason. Keep a round's
+fixes as local commits and push them together, since every push starts another bot review.
 
 ## 6. Land and report
 
