@@ -1,0 +1,23 @@
+.coderabbit.yaml
+  s_de02dda11bf8c6::t_fb2f10a624aca9 20-21
+cubic.yaml
+  s_de02dda11bf8c6::t_7fd70e603bb831 10-12
+docs/agents/afk-slice-workflow.md
+  s_de02dda11bf8c6::t_db079ac26a34d9 49-54,71-73,85-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bb2da86d440dbdc5af5b052a105c7d8bdaf73b80",
+  "prompts": {},
+  "sessions": {
+    "s_de02dda11bf8c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c8446a1e-2b28-4fc4-9952-778bf314a923",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Ly <git@brndn.ly>"
+    }
+  }
+}
