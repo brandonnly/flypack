@@ -17,3 +17,5 @@ knowledge_base:
         applyTo: "**"
       - files: "brand/tokens/README.md"
         applyTo: "brand/tokens/**"
+      - files: "docs/agents/afk-slice-workflow.md"
+        applyTo: "**"
